@@ -24,7 +24,7 @@
                 $act = $this->xml->ACT;
                 $this->action($act);
             } else
-                echo "Incorrect xml data1"; // exit;
+                echo "Incorrect xml data"; // exit;
         }
 
 //Define which request came from
