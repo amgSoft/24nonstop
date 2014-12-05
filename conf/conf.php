@@ -7,11 +7,11 @@
  */
 
 define("DB_HOST", "localhost");
-define("DB_NAME", "UTM5");
-define("DB_USER", "24nonstop");
-define("DB_PASS", "24nonstop_pass");
+define("DB_NAME", "my_db");
+define("DB_USER", "my_user");
+define("DB_PASS", "some_pass");
 
-define("SECRET", "F454FR43DE3224NONSTOP");
+define("SECRET", "some_secret");
 
 /**
  * @method __autoload() Загрузка файла класса при инициализации обьекта
