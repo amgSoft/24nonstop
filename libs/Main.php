@@ -11,7 +11,7 @@ class Main {
 //Primary constructor
     private function __construct($in_data) {
         if($this->xml = new SimpleXMLElement($in_data)) {
-            $act = $this->xml->ACT;
+            $act = $this->xml->act;
             $this->action($act);
         } else
             echo "Incorrect xml data"; // exit;
@@ -33,9 +33,13 @@ class Main {
                 $signForSimile = sha1($act+"_"+$pay_account+"_"+$service_id+"_"+$pay_id+"_"+SECRET);
 
                 if($sign == $signForSimile) {
+                    $contract = new GetInfo($pay_account);
+                    if(isset($contract)) {
 
-                } else
+                    }
+                } else {
                     echo "Incorrect SIGN"; // exit();
+                }
 
                 break;
 //request to make payment
